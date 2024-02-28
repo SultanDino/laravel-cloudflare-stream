@@ -287,7 +287,7 @@ class CloudflareStream
             $payload = array_merge($payload, $options);
         }
 
-        return $this->http->post("{$this->baseUrl}/{$this->accountId}/stream/clip", $payload);
+        return $this->http->post("{$this->baseUrl}/{$this->accountId}/stream/clip", $payload)->json();
     }
 
     /**
