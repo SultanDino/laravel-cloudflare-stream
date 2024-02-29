@@ -443,9 +443,9 @@ class CloudflareStream
         $header = ['alg' => 'RS256', 'kid' => $this->keyId];
         $payload = ['sub' => $uid, 'kid' => $this->keyId];
 
-        if ($exp) {
-            $payload['exp'] = time() + $exp;
-        }
+//        if ($exp) {
+//            $payload['exp'] = time() + $exp;
+//        }
 
         $encodedHeader = self::base64Url(json_encode($header));
         $encodedPayload = self::base64Url(json_encode($payload));
